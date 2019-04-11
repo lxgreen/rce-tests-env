@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+
+# ssh keys
+cp $DIR/id_rsa $DIR/id_rsa.pub $HOME/.ssh
+
+sudo apt-get update -y && sudo apt-get upgrade -y
+
+# nvm
+apt-get install build-essential libssl-dev -y
+sh -c "$(wget https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh -O -)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# node + npm
+nvm install --lts --latest-npm
+
+# npm packages
+npm i yarn -g
+npm i get-rce -g
+
+#zsh
+sudo apt-get install zsh -y
+
+echo "if [ -t 1 ]; then" >> ~/.bashrc
+echo "  exec zsh" >> ~/.bashrc
+echo "fi" >> ~/.bashrc
+
+#oh-my-zsh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
+
+exit
