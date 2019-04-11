@@ -2,8 +2,8 @@
 
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
-# ssh keys
-cp $DIR/id_rsa $DIR/id_rsa.pub $HOME/.ssh
+# ssh key
+cp $DIR/id_rsa $HOME/.ssh
 
 sudo apt-get update -y && sudo apt-get upgrade -y
 
