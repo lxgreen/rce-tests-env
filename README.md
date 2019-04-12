@@ -1,13 +1,15 @@
-# rce-tests-vagrant
+# rce-tests-env
+
+## Vagrant-based environment
 
 [Vagrant](https://www.vagrantup.com/)-based dev environment for [RCE](https://github.com/wix-incubator/rich-content) testing
 
-## Dependencies
+### Dependencies
 
 - [Vagrant](https://www.vagrantup.com/downloads)
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
-## Setup
+### Setup
 
 After dependencies are installed, run in termianal:
 
