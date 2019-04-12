@@ -31,18 +31,6 @@ Before you go, it is good to take a snapshot:
 vagrant snapshot save initial
 ```
 
-Later, you can restore it:
+Later, you can `restore` it.
 
-```bash
-vagrant snapshot restore initial
-```
-
-Run [get-rce](https://github.com/lxgreen/get-rce/blob/master/README.md) with required parameters.
-
-The running `editor` and `viewer` examples are available on `localhost:30000` and `localhost:30001`, respectively.
-
-At this point, it is can be useful to take another snapshot
-
-```bash
-vagrant snapshot save examples_up
-```
+Now you have a VM with fully configured node environment. Run [get-rce](https://github.com/lxgreen/get-rce/blob/master/README.md) with required parameters to fetch, build and run RCE examples. The running `editor` and `viewer` examples are available on `localhost:30000` and `localhost:30001`, respectively.
