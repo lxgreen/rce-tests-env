@@ -14,9 +14,9 @@
 After dependencies are installed, run in termianal:
 
 ```bash
-git clone https://github.com/lxgreen/rce-tests-vagrant.git
+git clone https://github.com/lxgreen/rce-tests-env.git
 
-cd rce-tests-vagrant
+cd rce-tests-env
 
 cp ~/.ssh/id_rsa
 
